@@ -1,0 +1,27 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        int contador = 1;
+        int quantidadeAcimaDe5 = 0;
+        int quantidadeDivisiveisPor3 = 0;
+
+        while (contador <= 20) {
+            int numero = (int) (Math.random() * 11);
+
+            System.out.print(numero + " ");
+            contador++;
+
+            if (numero > 5) {
+                quantidadeAcimaDe5++;
+            }
+
+            if (numero % 3 == 0) {
+                quantidadeDivisiveisPor3++;
+            }
+        }
+
+        System.out.println("\nQuantidade de números maiores que 5: " + quantidadeAcimaDe5);
+        System.out.println("Quantidade de números divisíveis por 3: " + quantidadeDivisiveisPor3);
+    }
+}
