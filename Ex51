@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        double[] valores = new double[8]; // array com 3 posições
+
+        int contador = 0;
+        // Entrada de dados usando while
+        while (contador<8) {
+            System.out.print("Valor do produto :R$");
+            valores[contador] = teclado.nextDouble();
+            contador++;
+            
+        }
+        Arrays.sort(valores); // ordena o array
+
+         double menor = valores[0];
+         double maior = valores[valores.length - 1];
+				
+        System.out.println("Menor: " + menor);
+        System.out.println("Maior: " + maior);
+        teclado.close();
+    }
+}
