@@ -1,0 +1,158 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package exerciciosalgoritmos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author anahe
+ */
+public class exerciciosalgoritmos02 {
+    public static void main(String[] args){
+ //Condições básicas (IF ELSE, DO WHILE , SWITCH CASE)
+ //Exercicio 17
+       /* Scanner entry = new Scanner(System.in);
+        System.out.println("Velocidade do carro km/h :");
+        int velocidade = entry.nextInt();
+        double multa = (velocidade - 80) * 5;
+        
+        if(velocidade>80){
+            System.out.println("O usuário foi multado em R$"+ multa);
+        }else{
+            System.out.println("Dentro do limite.");
+            */
+       
+//Exercicio 18
+        /*Scanner entry = new Scanner(System.in);
+        int anoAtual = 2026;
+        
+        System.out.println("Que ano você nasceu?");
+        int anoNasc = entry.nextInt();
+        int idade = anoAtual - anoNasc;
+        System.out.println("Você tem " + idade + " anos");
+        if(idade>=18){
+            
+            System.out.println("Pode votar! ");
+        }else{
+            System.out.println("Não pode votar ainda.");
+        }
+        */
+        
+//Exercicio 19 
+        /*Scanner entry = new Scanner (System.in);
+        System.out.println("Primeira nota :");
+        double n1 = entry.nextDouble();
+        System.out.println("Segunda nota :");
+        double n2 = entry.nextDouble();
+        
+        double media = n1 + n2 /2;
+        System.out.println("Sua média é : "+ media);
+        
+        if(media>=7){
+            System.out.println("Parabéns! Você teve um bom aproveitamento!");
+        }else{
+            System.out.println("Você ficou de recuperação.");
+        }
+        */
+        
+//Exercicio 20
+  /*  Scanner entry = new Scanner(System.in);
+    System.out.println("Escreva om numero inteiro: ");
+    int n = entry.nextInt();
+    
+    // par %2 == 0
+    if(n %2 == 0){
+        System.out.println("Número par.");
+    }else{
+        System.out.println("Numero ímpar.");
+    }
+*/
+  
+//Exercicio 21
+// regra ano bissexto = o ano deve ser divisível por 4
+
+   /* Scanner entry = new Scanner(System.in);
+    System.out.println("Que ano gostaria de verificar se é bissexto? : ");
+    int ano = entry.nextInt();
+    
+    if(ano %4==0){
+        System.out.println(ano + "É um ano bissexto.");
+    }else{
+        System.out.println(ano + "Não é bissexto.");
+    }
+    */
+//Exercicio 22
+
+  /*  Scanner teclado = new Scanner(System.in);
+        int anoAtual = 2026;
+        System.out.println("Que ano você nasceu? :");
+        int nasceu = teclado.nextInt();
+        
+        int idade = anoAtual - nasceu;
+        if(idade<18){
+            int falta = 18 - idade;
+            System.out.println("Faltam " + falta + " anos para seu alistamento obrigatório.");                
+        } else {
+            int passaram = idade - 18;
+            System.out.println("Já passaram "+ passaram + " anos desde seu alistamento.");
+        }
+*/
+  
+ //Exercicio 23
+    /*Scanner entry = new Scanner(System.in);
+        System.out.println("Qual o seu nome? :");
+        String nome = entry.nextLine();
+        System.out.println("Qual o seu sexo? [F/M]:");
+        char sexo = entry.next().charAt(0);
+        sexo = Character.toUpperCase(sexo);
+        System.out.println("Qual o valor da compra? ");
+        double compra = entry.nextDouble();
+        
+        if (sexo == 'F'){
+            double total = compra - (compra * 0.13);
+            System.out.println("Feliz dia da mulher! " +nome + " sua compra ficou R$" + total);
+    } else 
+            if( sexo == 'M'){
+            double total = compra - (compra * 0.05);
+            System.out.println("Olá "+ nome + " sua compra ficou R$" + total);
+    }else {
+    System.out.println("Você digitou um valor invalido. Tente novamente");
+*/
+    
+  //Exercício 24
+       /* Scanner entry = new Scanner(System.in);
+        System.out.println("Qual distância deseja percorrer em km? :");
+        int km = entry.nextInt();
+        
+        if(km<=200){
+            double passagem = km *0.50;
+            System.out.println("A passagem fica R$"+passagem);
+        }else{
+            double passagem = km *0.45;
+            System.out.println("A passagem fica R$"+passagem);
+        }
+         */
+       
+    //Exercicio 25 DESAFIO
+    
+    Scanner entry = new Scanner(System.in);
+        System.out.println("Qual o tamanho da reta 1? :");
+        double r1 = entry.nextDouble();
+        System.out.println("Qual o tamanho da reta 2? :");
+        double r2 = entry.nextDouble();
+        System.out.println("Qual o tamanho da reta 3? :");
+        double r3 = entry.nextDouble();
+        
+        // triangulo = r1 < r2 + r3
+        if (r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2){
+            System.out.println("É um triangulo.");
+        }else {
+            System.out.println("Não é um");
+        }
+}
+    
+}
+
