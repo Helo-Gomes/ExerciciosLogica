@@ -1,0 +1,220 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package exerciciosalgoritmos;
+
+import java.util.Scanner;
+import java.lang.Math;
+
+/**
+ *
+ * @author anahe
+ */
+public class ExerciciosAlgoritmos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+//PASSO 01 - SEQUÊNCIAS BÁSICAS
+//Exercicios 01-16
+// Exercicio 1       
+            
+        // System.out.println("Olá Mundo!");
+                       
+//Exercicio 2
+        
+       /*System.out.println("Qual o seu nome? ");
+        Scanner scanner = new Scanner(System.in);
+        String user = scanner.nextLine();
+        
+        System.out.println("Olá "+ user +" é um prazer te conhecer!");*/
+        
+//Exercicio 3
+       /* Scanner entry = new Scanner(System.in);
+
+        System.out.println("Nome do(a) funcionário(a)?: ");
+        String userName = entry.nextLine();
+        
+        System.out.println("Qual o sálario deste funcionário(a)? :");
+        float salario = entry.nextFloat();
+        
+        System.out.println("O(A) funcionário(a) "+ userName + " tem um salário de R$" + salario); */
+       
+//Exercicio 4
+
+       /* Scanner entry = new Scanner(System.in);
+    
+        System.out.println("Digite um valor :");
+        int n1 = entry.nextInt();
+        System.out.println("Digite outro valor :");
+        int n2 = entry.nextInt();
+        
+        System.out.println("A soma entre " + n1 + " e "+ n2 + " é " + (n1+n2));
+        */
+       
+//Exercício 5
+
+        /* 
+        Scanner lerMedia = new Scanner(System.in);
+        System.out.println("Qual a 1ª nota? :");
+        double n1 = lerMedia.nextDouble();
+        System.out.println("Qual a 2ª nota? :");
+        double n2 = lerMedia.nextDouble();
+        
+        double media = (n2 + n2) / 2;
+                
+        System.out.println("A média das notas " + n1 + " e " + n2 + " é " + media);         
+        */
+
+//Exercicio 6 
+
+   /* Scanner keyboard = new Scanner(System.in);
+        System.out.println("Digite um numero inteiro :");
+        int num  = keyboard.nextInt();
+        
+        int ant = num - 1;
+        int suces = num + 1;       
+        
+        System.out.println("O antecessor de "+num+ " é " + ant);
+        System.out.println("O sucessor de "+ num + " é "+ suces);
+    */
+   
+//Exercicio 7
+
+    /*Scanner keyboard = new Scanner(System.in);
+    
+        System.out.println("Digite um número real :");
+        double real = keyboard.nextDouble();
+        System.out.printf("O dobro de " +real+ " é %.2f ", real*2);
+        System.out.println(" ");
+        System.out.printf("A terça parte de "+real+" é %.2f ", real/3);
+    */
+    
+//Exercicio 8
+   /* Scanner entry = new Scanner(System.in);
+    System.out.println("Digite uma distância em metros :");
+    double metros = entry.nextDouble();
+        //km -> /1000
+        double km = metros/1000;
+        //hm -> /100
+        double hm = metros/100;
+        //dam -> /10
+        double dam = metros/10;
+        //dm-> * 10
+        double dm = metros*10;
+        //cm -> * 100
+        double cm = metros * 100;
+        //mm -> * 1000
+        double mm = metros * 1000;
+        
+        System.out.println("A distância de "+metros+"m corresponde a :");
+        System.out.printf("%10s km %10s dm", km,dm);
+        System.out.println("");
+        System.out.printf("%10s hm %10s cm", hm,cm);
+        System.out.println("");
+        System.out.printf("%10s dam %10s mm", dam,mm);
+        System.out.println("");
+*/
+   
+//Exercício 9
+
+     /*double dolar = 3.45;
+     Scanner entry = new Scanner(System.in);
+        System.out.println("Qual valor gostaria de converter em dolares? :");
+        double real = entry.nextDouble();
+        
+        double conversao = real/dolar;
+        System.out.println("Você pode comprar : "+conversao+ " dolares");
+        */
+     
+//Exercicio 10
+
+       /* Scanner entry = new Scanner(System.in);
+        System.out.println("Qual a altura da parede? ");
+        double altura = entry.nextDouble();
+        System.out.println("Qual a largura da parede? ");
+        double largura = entry.nextDouble();
+        
+        double area = altura * largura;
+        double tinta = area /2;
+        System.out.println("A área a ser pintada é de "+area+ " metros² e serão necessários "+ tinta + " litros de tinta.");
+        */
+       
+//Exercicio 11
+
+    /*Scanner entry = new Scanner(System.in);
+        System.out.println("Qual o valor de a :");
+        double a =entry.nextDouble();
+        System.out.println("Qual o valor de b :");
+        double b = entry.nextDouble();
+        System.out.println("Qual o valor de c :");
+        double c = entry.nextDouble();
+        
+        double delta = Math.pow(b,2)-4*a*c;
+        
+        System.out.println("O valor de delta é :"+ delta);
+    */
+    
+//Exercicio 12
+    /*Scanner entry = new Scanner(System.in);
+        System.out.print("Qual o preço do produto? : R$");
+        double preco = entry.nextDouble();
+        
+        double desc = preco - (preco * 0.05);
+        System.out.println("O preço promocional é : R$"+ desc);
+*/
+
+//Exercicio 13
+   /* Scanner entry = new Scanner(System.in);
+        System.out.println("Qual o valor do seu sálario :R$");
+        double salario = entry.nextDouble();
+        double aumento = salario + (salario * 0.15);
+        System.out.println("O valor do seu salário com o aumento de 15% é: R$"+aumento);
+*/
+   
+//Exercicio 14
+      /*  Scanner entry = new Scanner(System.in);
+        System.out.println("Quantos km foram percorridos? :");
+        double km = entry.nextDouble();
+        System.out.println("Quantidade de dias alugados: ");
+        int dias = entry.nextInt();
+        
+        double valor = (dias*90) + (km * 0.20);
+        System.out.println("Preço total do aluguel do carro: R$"+valor);
+*/
+
+//Exercicio 15
+        /*int valorHora = 25;
+        Scanner entry = new Scanner(System.in);
+        System.out.println("Quantos dias foram trabalhados no mês :");
+        int dias = entry.nextInt();
+        double salario = dias * (8 * valorHora);
+        System.out.println("O sálario do funcionário é :R$"+salario);
+*/
+        
+//Exercicio 16 DESAFIO
+
+Scanner entry = new Scanner(System.in);
+        System.out.println("Quantos cigarros você fuma por dia? :");
+        int cigarrosDia = entry.nextInt();
+        System.out.println("Há quantos anos você fuma? :");
+        int anosFumando = entry.nextInt();
+        
+        // cigarrosDia * 10 = minutos perdidos no dia 
+        int minutosPerdidosDia = cigarrosDia * 10;
+        // (1 ano = 365 dias) então -> anosFumando *365dias = dias fumados  
+        int diasFumando = anosFumando * 365;
+        //diasFumando * minutosPerdidosDia = quantidade de minutos perdidos no ano
+        int minutosPerdidos = diasFumando * minutosPerdidosDia;
+        // quantidade de minutos perdidos /60 = horasPerdidas
+        int horasPerdidas = minutosPerdidos /60;
+        // horasPerdidas/24 = dias de vida perdidos
+        int diasPerdidos = horasPerdidas/24;
+        
+        System.out.println("Você perdeu "+diasPerdidos +" dias de vida por conta do uso de cigarros.");
+
+    }
+    
+}
