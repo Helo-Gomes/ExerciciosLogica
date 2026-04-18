@@ -1,0 +1,39 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package exerciciosalgoritmos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author anahe
+ */
+public class Jokenpo {
+   public static void main (String[] args){
+       
+    //31 DESAFIO CRIAR JOKENPO
+    
+   Scanner entry = new Scanner(System.in);
+    
+       System.out.println("===================== VAMOS JOGAR JO-KEN-PO! =======================");
+        System.out.println("Escolha uma opção: PEDRA-1 | PAPEL-2 | TESOURA-3 (DIGITE SOMENTE NUMERO)");
+        int jogador = entry.nextInt();
+        int pc = (int)(Math.random() * 3) + 1;
+        System.out.println("PC JOGOU OPÇÃO: "+ pc);
+        
+        if(jogador == pc){
+            System.out.println("EMPATE!");
+        }else if(jogador == 2 && pc == 1){
+            System.out.println("JOGADOR GANHOU!");
+        }else if(jogador == 1 && pc == 3){
+            System.out.println("JOGADOR GANHOU!");
+        }else if(jogador == 3 && pc == 2){
+            System.out.println("JOGADOR GANHOU!");
+        }else{
+            System.out.println("PC GANHOU!");
+        }
+        
+}
+}
