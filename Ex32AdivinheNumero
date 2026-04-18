@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package exerciciosalgoritmos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author anahe
+ */
+public class AdivinheoNumero {
+    //Exercicio 32 DESAFIO 
+    public static void main(String[] args){
+        Scanner entry = new Scanner(System.in);
+        System.out.println("Adivinhe o número! Escolha um numero de 1 a 5: ");
+        int jogador = entry.nextInt();
+        int pc = (int)(Math.random() * 5) + 1;
+         
+        if (jogador < 1 || jogador > 5) {
+            System.out.println("Digite um número entre 1 e 5!");}
+        else if (jogador == pc){
+             System.out.println("Uau! Você acertou!");
+         }else{
+             System.out.println("Você errou o numero era " + pc + ". Tente novamente.");
+         }
+    }
+}
