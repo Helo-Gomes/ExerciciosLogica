@@ -1,0 +1,273 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package exerciciosalgoritmos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author anahe
+ */
+public class ExerciciosAlgoritmos03 {
+        public static void main (String[] args){
+            //PASSO 03 - CONDIÇÕES COMPOSTAS
+
+    // Exercicio 26 
+        /*Scanner entry = new Scanner(System.in);
+            System.out.println("Digite o primeiro numero :");
+            int n1 = entry.nextInt();
+            System.out.println("Digite o segundo numero :");
+            int n2 = entry.nextInt();    
+
+            if(n1>n2){
+                System.out.println("O primeiro valor é maior.");
+            } else if(n2>n1){
+                System.out.println("O segundo valor é maior.");
+            }else {
+                System.out.println("Os valores são iguais.");
+            }
+        */   
+    //Exercicio 27
+            /*Scanner entry = new Scanner(System.in);
+            System.out.println("---------------- MÉDIA BOLETIM ESCOLAR-------------------");
+            System.out.println("Digite a primeira nota");
+            double n1 = entry.nextDouble();
+            System.out.println("Digite a segunda nota :");
+            double n2 = entry.nextDouble();
+            
+            double media = (n1 + n2)/2;
+            System.out.println(media);
+            
+            if(media<=4.9){
+                System.out.println("REPROVADO");
+            } else if (media<=6.9){
+                    System.out.println("RECUPERAÇÃO");
+                }
+                else{
+                    System.out.println("APROVADO");
+                }
+                */
+     //Exercicio 28
+     
+           /* Scanner entry = new Scanner(System.in);
+            System.out.println("Qual a largura do terreno? ");
+            int largura = entry.nextInt();
+            System.out.println("Qual o comprimento do terreno? ");
+            int comp = entry.nextInt();
+            
+            int area = largura * comp;
+            System.out.println("A area do terreno é de "+area+ "m²");
+            if(area<=100){
+                System.out.println("TERRENO POPULAR");
+            } else if (area<=500){
+                System.out.println("TERRENO MASTER");
+            } else{
+                System.out.println("TERRENO VIP");
+            }
+            */
+      //Exercicio 29
+          /* Scanner entry = new Scanner(System.in);
+            System.out.println("CONSULTE SEU AUMENTO SALARIAL");
+            System.out.println("Qual o seu nome? :");
+            String nome = entry.nextLine();
+            System.out.println("Qual o seu salário atual? :R$");
+            double sal = entry.nextDouble();
+            System.out.println("Há quantos anos está na empresa? :");
+            int anos = entry.nextInt();
+            
+             
+            if(anos<=3){
+                double aumento = sal + (sal*0.03);
+                System.out.println("Olá "+nome+" seu novo sálario é de R$"+aumento);
+            }else if (anos>=10){
+                double aumento = sal + (sal*0.125);
+                System.out.println("Olá "+nome+" seu novo sálario é de R$"+aumento);
+            }else{
+                double aumento = sal + (sal*0.20);
+                System.out.println("Olá "+nome+" seu novo sálario é de R$"+aumento);
+            }
+         */
+          
+     //Exercicio 30 DESAFIO
+    
+   /* Scanner entry = new Scanner(System.in);
+        System.out.println("Qual o tamanho da reta 1? :");
+        double r1 = entry.nextDouble();
+        System.out.println("Qual o tamanho da reta 2? :");
+        double r2 = entry.nextDouble();
+        System.out.println("Qual o tamanho da reta 3? :");
+        double r3 = entry.nextDouble();
+        
+        
+            if (r1 < r2 + r3 && r2 < r1 + r3 && r3 < r1 + r2) {
+
+                System.out.println("É um triângulo.");
+
+                if (r1 == r2 && r2 == r3) { //Estrutura condicional aninhada!
+                    System.out.println("Triângulo equilátero");
+
+                } else if (r1 == r2 || r1 == r3 || r2 == r3) {
+                    System.out.println("Triângulo isósceles");
+
+                } else {
+                    System.out.println("Triângulo escaleno");
+                }
+
+            } else {
+                System.out.println("Não é um triângulo");
+            }*/
+  //---------------> 31 JOKENPO E 32 ADIVINHE-O-NUMERO EM ARQUIVOS SEPARADOS
+  
+  //Exercicio 33
+  
+        /*Scanner entry = new Scanner(System.in);
+            System.out.println("-----------------------VERIFICADOR DE EMPRÉSTIMO CASA-PRÓPRIA------------------------");
+            System.out.println("Qual o valor da casa? :R$");
+            double valorCasa = entry.nextDouble();
+            System.out.println("Qual sua renda mensal? :R$");
+            double salario = entry.nextDouble();
+            System.out.println("Em quantos anos gostaria de pagar? :(numero somente)");
+            int anos = entry.nextInt();
+            
+            int mesesPagar = anos *12;
+            double valorPrestacaoMensal = valorCasa/mesesPagar;
+            double porcentagem = salario* 0.30;
+            System.out.printf("O valor da prestação mensal será de :R$ %.2f" , valorPrestacaoMensal);
+            System.out.println("");
+            if(valorPrestacaoMensal > porcentagem){
+                
+                System.out.println("Empréstimo negado.");
+            } else {
+               
+                System.out.println("Empréstimo aprovado!");
+            } */
+        
+        
+    //Exercicio 34
+    //calculo IMC
+    
+        /*Scanner entry = new Scanner(System.in);
+            System.out.println("================================= CALCULADORA DE IMC ===================================");
+            System.out.println("Qual o seu peso em KG? :");
+            double peso = entry.nextDouble();
+            System.out.println("Qual a sua altura em M? :");
+            double altura = entry.nextDouble();
+            
+            double imc = peso/(altura*altura);
+            
+            if(imc<18.5){
+                System.out.println("Você está abaixo do peso ideal.");
+            }else if(imc <=25){
+                System.out.println("Você está no seu peso ideal.");
+            }else if(imc <=30){
+                System.out.println("Você está com sobrepeso.");
+            }else if(imc <= 40){
+                System.out.println("Você está com obesidade.");
+            }else{
+                System.out.println("Você está com obesidade mórbida.");
+            }*/
+        
+        
+     //Exercicio 35
+     
+      /*  Scanner entry  = new Scanner(System.in);
+            System.out.println("========================= ALUGUEL DE CARROS =========================");
+            
+            System.out.println("Qual o tipo de carro escolhido? 1- Popular | 2 - Luxo :");
+            int tipoCarro = entry.nextInt();
+            System.out.println("Quantos dias alugados? :");
+            double dias = entry.nextDouble();
+            System.out.println("Quantos Km percorridos? :");
+            double km = entry.nextDouble();
+                      
+            switch(tipoCarro){
+            case 1:
+            double popular = dias*90;
+                if(km<=100){
+                double preco = popular + (km*0.20);
+                System.out.println("O valor total a ser pago será de R$" + preco);
+                }else{
+                    double preco = popular + (km*0.10);
+                        System.out.println("O valor total a ser pago será de R$" + preco);
+                }
+            break;
+            
+            case 2:
+            double luxo = dias*150;
+                if(km<=200){
+                double preco = luxo + (km*0.30);
+                System.out.println("O valor total a ser pago será de R$" + preco);
+                }else{
+                    double preco = luxo + (km*0.25);
+                        System.out.println("O valor total a ser pago será de R$" + preco);
+                }
+            break;
+            default:
+            System.out.println("Valor inválido.");
+        } */
+        //Exercicio 36
+        /*Scanner entry = new Scanner(System.in);
+            System.out.println("Quantas horas de atividades físicas fez nesse mês? :");
+            int horas = entry.nextInt();
+            
+            int pontos;
+            
+            if(horas<=10){
+                 pontos = horas*2;
+              
+            }else if(horas<=20){
+                 pontos = horas*5;
+                
+            }else{
+                 pontos = horas*10;
+                
+            }
+                double fatura = pontos * 0.05;
+                System.out.println("Você ganhou "+pontos+" pontos e ira faturar R$"+fatura);
+*/
+            //Exercicio 37
+            
+               /* Scanner entry = new Scanner(System.in);
+                System.out.println("Olá, qual o seu salário liquido atualmente? R$");
+                double salario = entry.nextDouble();
+                System.out.println("Qual o seu sexo? [F/M] :");
+                char sexo = entry.next().charAt(0);
+                sexo = Character.toUpperCase(sexo);
+                System.out.println("Há quantos anos trabalha na empresa? :");
+                double anos = entry.nextDouble();
+                
+                double novoSalario;
+                
+                switch(sexo){
+                    case'F':
+                        if(anos<15){
+                            novoSalario = salario + (salario*0.05);
+                        }else if(anos<=20){
+                            novoSalario = salario + (salario*0.12);
+                        }else{
+                            novoSalario = salario + (salario*0.23);
+                        }
+                     break;
+                    
+                    case'M':
+                        if(anos<20){
+                            novoSalario = salario + (salario*0.03);
+                        }else if(anos<=30){
+                            novoSalario = salario + (salario*0.13);
+                        }else{
+                            novoSalario = salario + (salario*0.25);
+                        }
+                        break;
+                   default:
+                       System.out.println("Preencha o formulário novamente.");
+                       return;
+                       
+                }
+                
+                System.out.println("O seu novo salário será de R$"+ novoSalario +" reais");
+                */
+                
+}
+}
