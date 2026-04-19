@@ -1,0 +1,40 @@
+package EnquantoFlag;
+
+import java.util.Scanner;
+
+public class Ex57 {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+        boolean rodando = true;
+        double somaF = 0;
+        double somaM = 0;
+
+        while(rodando){
+
+            System.out.println("Qual o seu salário? ");
+            double salario = entrada.nextDouble();
+            System.out.println("Qual o seu sexo? [F/M]");
+            char sexo = entrada.next().charAt(0);
+            sexo = Character.toUpperCase(sexo);
+
+            System.out.println("Você quer continuar? [S/N]");
+            char continuar = entrada.next().charAt(0);
+            continuar = Character.toUpperCase(continuar);
+
+            if(sexo == 'F'){
+                somaF+=salario;
+            }
+            if(sexo == 'M'){
+
+                somaM+=salario;
+            }
+            if(continuar == 'N'){
+                rodando = false;
+            }
+        }
+        System.out.println("O total de salários pagos aos homens é :R$"+somaM);
+        System.out.println("O total de salários pagos as mulheres é :R$"+ somaF);
+
+    }
+}
