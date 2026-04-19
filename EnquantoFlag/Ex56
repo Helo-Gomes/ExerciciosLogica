@@ -1,0 +1,32 @@
+package EnquantoFlag;
+
+import java.util.Scanner;
+
+public class Ex56 {
+    public static void main(String[] args) {
+     
+         //só para de ler numero se 1111 for digitado
+        Scanner entrada = new Scanner(System.in);
+        boolean rodando = true;
+        int soma = 0;
+        int numero = 0;
+
+
+            while (rodando){ //enquanto programa estiver rodando
+                System.out.println("Digite um número : ");
+                numero = entrada.nextInt();
+
+               if(numero == 1111){ //verifica no loop se o numero digitado é 1111
+                    rodando = false; // se for , o programa para de rodar
+
+               }
+               if(numero !=1111){
+                   soma+=numero; // sse for diferente soma e continua adicionando numeros
+               }
+            }
+
+        System.out.println("A soma é "+ soma);
+
+
+    }
+}
