@@ -1,0 +1,49 @@
+package RepeticaoPara;
+
+import java.util.Scanner;
+
+public class Ex68 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+
+        double peso = 0;
+        double pesoF = 0;
+        double contagemF = 0;
+        double mediaF = 0;
+        int contagemMcomMaisDe100 = 0;
+        double maiorPesoM = peso;
+        char sexo ;
+        double somaPesosF = 0;
+
+        for (int i = 1; i <=8 ; i++) {
+            System.out.println("Digite o "+i+"° sexo [F/M]:");
+            sexo = entrada.nextLine().toUpperCase().charAt(0);
+            System.out.println("Digite o "+i+"° peso : [Kg]");
+            peso = Double.parseDouble(entrada.nextLine()); // string nextLine do sexo só da certo com string
+
+            if (sexo == 'F'){
+                pesoF = peso;
+                somaPesosF +=pesoF;
+                contagemF++;
+
+
+            }
+            if(sexo == 'M'){
+                if(peso > maiorPesoM){
+                    maiorPesoM = peso;
+                }
+                if( peso> 100){
+                    contagemMcomMaisDe100++;
+                }
+            }
+
+        }
+        mediaF = somaPesosF/contagemF;
+
+        System.out.println("Quantidade de mulheres cadastradas :"+contagemF);
+        System.out.println("Quantidade de homens com mais de 100Kg :"+contagemMcomMaisDe100);
+        System.out.println("Média de peso entre as mulheres :"+mediaF +"Kg");
+        System.out.println("Maior peso entre os homens :"+maiorPesoM+"Kg");
+    }
+}
