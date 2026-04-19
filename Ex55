@@ -1,0 +1,39 @@
+package EnquantoFlag;
+
+import java.util.Scanner;
+
+public class Ex55boolean {
+    public static void main(String[] args){
+        Scanner entry = new Scanner(System.in);
+        int pc = (int)(Math.random() * 10) + 1; // 1 Sortear número (1 a 10)
+        int contador = 0;
+        boolean acertou = false; //acertou começa como falso
+
+
+        System.out.println("Adivinhe o número! Você tem 4 tentativas!");
+
+        while(contador < 4){//Criar repetição com 4 tentativas
+            System.out.println(" Escolha um numero de 1 a 10: "); // pedir chute
+            int jogador = entry.nextInt();
+
+            if (jogador < 1 || jogador > 10) {
+                System.out.println("ATENÇÃO Digite um número entre 1 e 10!");
+                continue; //Não contar tentativa inválida, VOLTA PRO INICIO
+
+            }
+            else if (jogador == pc){
+                System.out.println("Uau! Você acertou! :)");
+                 acertou = true; //atribui o resultado verdadeiro
+                break;
+            }else{
+                System.out.println("Você errou.");
+            }
+            contador++;
+        }
+
+        if(!acertou){ //se resultado diferente de verdadeiro e tentativas acabarem, perdeu
+            System.out.println("VOCÊ PERDEU! :( O número era: "+ pc);
+        }
+
+    }
+}
