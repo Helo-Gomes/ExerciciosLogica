@@ -1,0 +1,52 @@
+package EnquantoFlag;
+
+import java.util.Scanner;
+
+public class Ex59 {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+        boolean rodando = true;
+        int quantidadeM = 0;
+        int  somaIdadeM = 0;
+        int mediaIdadeM;
+        int idade = 0;
+        int menorIdadeF = 150;
+        int maiorIdadeTodos = idade;
+
+        while (rodando){
+            System.out.println("Qual o seu sexo? [F/M]");
+            char sexo = entrada.next().charAt(0);
+            sexo = Character.toUpperCase(sexo);
+            System.out.println("Qual a sua idade :");
+            idade = entrada.nextInt();
+            System.out.println("Você quer continuar? [S/N]");
+            char continuar = entrada.next().charAt(0);
+            continuar = Character.toUpperCase(continuar);
+
+            if(idade < menorIdadeF && sexo == 'F'){
+                menorIdadeF = idade;
+            }
+
+
+            if(idade > maiorIdadeTodos){
+                maiorIdadeTodos = idade;
+            }
+
+            if(sexo == 'M'){
+                somaIdadeM+=idade;
+                quantidadeM++;
+            }
+            if(continuar == 'N'){
+                rodando = false;
+            }
+        }
+        mediaIdadeM = somaIdadeM/quantidadeM;
+
+        System.out.println("A maior idade lida é :"+ maiorIdadeTodos+" anos.");
+        System.out.println("A quantidade de homens cadastrados é :"+ quantidadeM);
+        System.out.println("A idade da mulher mais jovem é: "+menorIdadeF +" anos.");
+        System.out.println("A média de idade entre os homens é :"+ mediaIdadeM +" anos.");
+
+    }
+}
