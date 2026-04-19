@@ -1,0 +1,27 @@
+package RepeticaoPara;
+
+import java.util.Scanner;
+
+public class Ex69 {
+    public static void main(String[] args) {
+        //DESAFIO
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("---- Criador de Progressão Aritmética -----");
+        System.out.println("Qual o primeiro termo da PA? :");
+        int inicioPa = entrada.nextInt();
+        System.out.println("Qual será a razão da PA? :");
+        int razao = entrada.nextInt();
+
+        int somaPA = 0;
+        int numero = inicioPa;
+
+        for (int i = 1; i <=10 ; i++) {
+            System.out.print(numero+" ");
+            somaPA+=numero;
+            numero= numero + razao;
+
+        }
+
+        System.out.println("A soma de todos os valores é : "+somaPA);
+    }
+}
