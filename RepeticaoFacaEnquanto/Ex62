@@ -1,0 +1,41 @@
+package RepeticaoFacaEnquanto;
+
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class Ex62 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        boolean rodando = true;
+        int idades = 0;
+        int contaIdades = 0;
+        int contaIdades21 = 0;
+        int somaIdades = 0;
+
+        do{
+
+            System.out.println("Qual a sua idade? :");
+            idades = Integer.parseInt(entrada.nextLine());
+            System.out.println("Continuar digitando idades? [S/N]");
+            char continuar = entrada.nextLine().toUpperCase().charAt(0); //transforma em letra maiuscula, pega primeiro caractere
+
+            if(idades>=21){
+                contaIdades21++;
+            }
+
+            if(continuar == 'N'){
+                rodando = false;
+            }
+            somaIdades+=idades; // somaIdades = somaIdades + idades;
+            contaIdades++; //contador
+        }while(rodando);
+
+        int mediaIdades = somaIdades/contaIdades;
+        System.out.println("Quantidade de idades digitadas :"+contaIdades);
+        System.out.println("Média de idades digitadas :"+mediaIdades);
+        System.out.println("Pessoas com 21 anos ou mais :"+contaIdades21);
+    }
+}
