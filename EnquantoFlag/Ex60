@@ -1,0 +1,85 @@
+package EnquantoFlag;
+
+import java.util.Scanner;
+
+public class Ex60 {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+        //variaveis gerais
+        int idade = 0;
+        int somaIdades = 0;
+        int contadorPessoas = 0;
+        int idadePessoaMaisVelha = 0;
+        String nomePessoaMaisVelha = "";
+
+        //variaveis mulheres
+        int idadeMulherMaisJovem = idade; //atribuir os dois valores a idade para depois fazer o teste
+        String nomeMulherMaisJovem = "";
+        int contadorMulheresMenos18 = 0;
+
+        //variaveis homens
+        int contadorHomensMais30 = 0;
+
+        boolean rodando = true;
+        boolean naoApareceuMulher = true; // Ainda não apareceu nenhuma mulher no programa
+
+        while(rodando){
+
+            System.out.println("Qual o seu nome? :");
+            String nomes = entrada.nextLine();
+
+            System.out.println("Qual a sua idade :");
+            idade = Integer.parseInt(entrada.nextLine());
+
+            System.out.println("Qual o seu sexo? [F/M]");
+            char sexo = entrada.nextLine().toUpperCase().charAt(0);
+
+            System.out.println("Você quer continuar? [S/N]");
+            char continuar = entrada.nextLine().toUpperCase().charAt(0);
+
+            if(idade > idadePessoaMaisVelha){
+                idadePessoaMaisVelha = idade;
+                nomePessoaMaisVelha = nomes;
+            }
+
+            if(sexo == 'F'){
+                if(naoApareceuMulher){
+                    idadeMulherMaisJovem = idade;
+                    nomeMulherMaisJovem = nomes;
+                    naoApareceuMulher = false; //é a primeira mulher atualiza
+                }else {
+                    if (idade < idadeMulherMaisJovem){
+                        idadeMulherMaisJovem = idade;
+                        nomeMulherMaisJovem = nomes;
+                    }
+                }
+                if(idade < 18){
+                    contadorMulheresMenos18++;
+                }
+            }
+
+            if(sexo == 'M'){
+                if(idade>30){
+                    contadorHomensMais30++;
+                }
+            }
+
+            if(continuar == 'N'){
+                rodando = false;  // se resposta = "não", então continuar = falso
+            }
+            somaIdades+=idade;
+            contadorPessoas++;
+        }
+
+        double mediaIdades = somaIdades/contadorPessoas;
+        System.out.println("a) O nome da pessoa mais velha é :"+nomePessoaMaisVelha);
+        System.out.println("b) O nome da mulher mais jovem é :"+nomeMulherMaisJovem);
+        System.out.println("c) A media de idade do grupo é :"+mediaIdades);
+        System.out.println("d) A quantidade de homens com mais de 30 anos é :"+contadorHomensMais30);
+        System.out.println("e) A quantidade de mulheres com menos de 18 anos é :"+contadorMulheresMenos18);
+
+
+    }
+}
