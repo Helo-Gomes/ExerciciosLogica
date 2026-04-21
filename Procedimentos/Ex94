@@ -1,0 +1,32 @@
+package Procedimentos;
+
+public class Ex94 {
+    /*94) [DESAFIO] Desenvolva um aplicativo que tenha um procedimento chamado
+    Fibonacci() que recebe um único valor inteiro como parâmetro, indicando quantos
+    termos da sequência serão mostrados na tela. O seu procedimento deve receber
+    esse valor e mostrar a quantidade de elementos solicitados.
+    Obs: Use os exercícios 70 e 75 para te ajudar na solução
+    Ex:
+    Fibonacci(5) vai gerar 1 >> 1 >> 2 >> 3 >> 5 >> FIM
+    Fibonacci(9) vai gerar 1 >> 1 >> 2 >> 3 >> 5 >> 8 >> 13 >> 21 >> 34 >> FIM*/
+
+    public static void Fibonacci(int f) {
+        int[] fibonacci = new int[f];
+        fibonacci[0] = 1;
+        fibonacci[1] = 1;
+
+        for ( int i = 0 ; i < fibonacci.length ; i++) { //for conta até fim do vetor
+            if (i>= 2){
+                //fórmula fibonacci Fn = Fn-1 + Fn-2
+                fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+            }
+            System.out.print(fibonacci[i]+">>");
+        }
+        System.out.print(" FIM");
+
+    }
+
+    public static void main(String[] args) {
+        Fibonacci(5); // quantos termos da sequência serão mostrados na tela
+    }
+}
