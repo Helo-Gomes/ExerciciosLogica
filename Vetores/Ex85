@@ -1,0 +1,32 @@
+package Vetores;
+
+import java.util.Scanner;
+
+public class Ex85 {
+    public static void main(String[] args) {
+        /*85) Faça um algoritmo que leia o nome, o sexo e o salário de 5 funcionários e
+            guarde esses dados em três vetores. No final, mostre uma listagem contendo
+            apenas os dados das funcionárias mulheres que ganham mais de R$5 mil.*/
+
+        Scanner entrada = new Scanner(System.in);
+        String[] nome = new String[5];
+        char[] sexo = new char[5];
+        double[] salario = new double[5];
+
+        for (int i = 0; i < nome.length ; i++) {
+            System.out.println("Qual o seu nome ?:");
+            nome[i]= entrada.nextLine();
+            System.out.println("Qual o seu sexo ?: [F/M] ");
+            sexo[i] = entrada.nextLine().toUpperCase().charAt(0);
+            System.out.println("Qual o seu salário ?: R$");
+            salario[i] = Double.parseDouble(entrada.nextLine());
+        }
+        for (int i = 0; i < nome.length ; i++) {
+            if(sexo[i]=='F' && salario[i]> 5000){
+                System.out.println("A funcionaria "+nome[i]+" ganha R$"+salario[i]);
+            }
+
+        }
+
+    }
+}
