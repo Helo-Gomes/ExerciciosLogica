@@ -1,0 +1,30 @@
+package Procedimentos;
+
+import java.util.Scanner;
+
+public class Ex93 {
+    /*93) Faça um programa que tenha um procedimento chamado Contador() que recebe
+    três valores como parâmetro: o início, o fim e o incremento de uma contagem. O
+    programa principal deve solicitar a digitação desses valores e passá-los ao
+    procedimento, que vai mostrar a contagem na tela*/
+
+    public static void Contador(int inicio, int fim, int incremento){
+        for (int i = inicio; i < fim; i+=incremento) {
+            System.out.print(i+">>");
+        }
+        System.out.println("FIM");
+    }
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Que numero começa a contagem?");
+        int n1 = teclado.nextInt();
+        System.out.println("Que numero termina a contagem?");
+        int n2 = teclado.nextInt();
+        System.out.println("De quanto em quanto deve contar?");
+        int n3 = teclado.nextInt();
+
+        Contador(n1,n2,n3);
+
+    }
+}
