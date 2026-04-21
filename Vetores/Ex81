@@ -1,0 +1,50 @@
+package Vetores;
+
+import java.util.Scanner;
+
+public class Ex81 {
+    public static void main(String[] args) {
+        /*81) Crie um programa que leia a idade de 8 pessoas e guarde-as em um vetor. No
+            final, mostre:
+            a) Qual é a média de idade das pessoas cadastradas
+            b) Em quais posições temos pessoas com mais de 25 anos
+            c) Qual foi a maior idade digitada (podem haver repetições)
+            d) Em que posições digitamos a maior idade
+            */
+
+        Scanner teclado = new Scanner(System.in);
+
+        int[] vetorIdade = new int[8];
+        double somaIdades = 0;
+        double mediaIdades = 0;
+        int maiorIdade = 0;
+
+        for (int i = 0; i < vetorIdade.length ; i++) {
+            System.out.println("Qual a sua idade :");
+            int idade = teclado.nextInt();
+            vetorIdade[i] = idade;
+            somaIdades += idade;
+            mediaIdades = somaIdades/vetorIdade.length;
+
+        }
+        System.out.println("A média das idades é "+mediaIdades);
+        System.out.println("Temos pessoas com mais de 25 anos nas posições: ");
+        for (int i = 0; i < vetorIdade.length ; i++) {
+            if (vetorIdade[i] > 25){
+                System.out.print(i+", "); //mostra as posições
+            }
+        }
+        for (int i = 0; i < vetorIdade.length ; i++) {
+            if(vetorIdade[i]> maiorIdade){
+                maiorIdade = vetorIdade[i];
+            }
+        }
+        System.out.println();
+        System.out.println("A maior idade é :"+ maiorIdade);
+        for (int i = 0; i < vetorIdade.length ; i++) {
+            if(vetorIdade[i] ==  maiorIdade){
+                System.out.print("A maior idade está na posição "+ i);
+            }
+        }
+    }
+}
