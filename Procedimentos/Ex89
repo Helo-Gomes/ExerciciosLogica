@@ -1,0 +1,42 @@
+package Procedimentos;
+
+import java.util.Scanner;
+
+public class Ex89 {
+    /*89) Crie um programa que melhore o procedimento Gerador() da questão anterior
+             para que o programador possa escolher uma entre três bordas:
+              +-------=======------+ Borda 1
+              ~~~~~~~~:::::::~~~~~~~ Borda 2
+              <<<<<<<<------->>>>>>> Borda 3
+             Ex: Uma chamada válida seria Gerador("Portugol Studio", 3, 2)
+             ~~~~~~~~:::::::~~~~~~~
+              Portugol Studio
+              Portugol Studio
+              Portugol Studio
+             ~~~~~~~~:::::::~~~~~~~*/
+    public static void Gerador(String aprendendoPortugol, int vezes, int borda) {
+
+        String padraoBorda = "";
+
+
+        switch (borda) {
+            case 1:
+                padraoBorda = "+-------=======------+";
+                break;
+            case 2:
+                padraoBorda = "~~~~~~~~:::::::~~~~~~~";
+                break;
+            case 3:
+                padraoBorda = "<<<<<<<<------->>>>>>>";
+        }
+        System.out.println(padraoBorda);
+        for (int i = 0; i < vezes; i++) {
+            System.out.println(" " + aprendendoPortugol + " ");
+        }
+        System.out.println(padraoBorda);
+    }
+
+    public static void main(String[] args) {
+        Gerador("Portugol Studio", 3,1);
+    }
+}
