@@ -1,0 +1,49 @@
+
+package Vetores;
+
+import java.util.Scanner;
+
+public class Ex82 {
+    public static void main(String[] args) {
+        /*82) Faça um algoritmo que leia a nota de 10 alunos de uma turma e guarde-as em
+            um vetor. No final, mostre:
+            a) Qual é a média da turma
+            b) Quantos alunos estão acima da média da turma
+            c) Qual foi a maior nota digitada
+            d) Em que posições a maior nota aparece*/
+
+            Scanner teclado = new Scanner(System.in);
+
+            double[] vetorNotas = new double[10];
+            double somaNotas = 0;
+            double mediaTurma = 0;
+            int alunosAcimaMedia = 0;
+            double maiorNota = 0;
+
+            for (int i = 0; i < vetorNotas.length; i++) {
+                System.out.println("Qual a sua nota? :");
+                double nota = teclado.nextDouble();
+                vetorNotas[i]=nota;
+                somaNotas += vetorNotas[i];
+                mediaTurma = somaNotas/ vetorNotas.length;
+            }
+            for (int i = 0; i < vetorNotas.length; i++) {
+                if(vetorNotas[i] > mediaTurma){
+                    alunosAcimaMedia++;
+                }
+            }
+            System.out.println("A média das turmas é :"+mediaTurma);
+            System.out.println("A quantidade de alunos acima da média é :"+ alunosAcimaMedia);
+            for (int i = 0; i < vetorNotas.length ; i++) {
+                if(vetorNotas[i]> maiorNota){
+                    maiorNota = vetorNotas[i];
+                }
+            }
+            System.out.println("A maior nota digitada foi :"+maiorNota);
+            for (int i = 0; i < vetorNotas.length ; i++) {
+                if(vetorNotas[i]== maiorNota){
+                    System.out.println("A maior nota aparece na posição "+ i);
+                }
+            }
+    }
+}
