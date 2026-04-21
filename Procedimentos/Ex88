@@ -1,0 +1,18 @@
+package Procedimentos;
+
+public class Ex88 {
+
+    public static void Gerador(String aprendendoPortugol, int vezes) {
+
+
+        System.out.println("+-------=======------+");
+        for (int i = 0; i < vezes; i++) {
+            System.out.println(" " + aprendendoPortugol + " ");
+        }
+        System.out.println("+-------=======------+");
+    }
+
+    public static void main(String[] args) {
+        Gerador("Portugol Studio", 3);
+    }
+}
