@@ -1,0 +1,29 @@
+package Procedimentos;
+
+import java.util.Scanner;
+
+public class Ex91 {
+    /*91) Desenvolva um algoritmo que leia dois valores pelo teclado e passe esses
+    valores para um procedimento Maior() que vai verificar qual deles é o maior e
+    mostrá-lo na tela. Caso os dois valores sejam iguais, mostrar uma mensagem
+    informando essa característica.*/
+    public static void Maior(int a, int b){
+        if(a > b){
+            System.out.println(a + " é maior");
+        } else if (b > a) {
+            System.out.println(b + " é maior");
+        }else{
+            System.out.println("Os números são iguais.");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Qual o primeiro numero?");
+        int n1 = teclado.nextInt();
+        System.out.println("Qual o segundo numero?");
+        int n2 = teclado.nextInt();
+
+        Maior(n1,n2);
+
+    }
+}
