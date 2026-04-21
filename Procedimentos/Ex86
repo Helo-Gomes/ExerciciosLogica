@@ -1,0 +1,16 @@
+package Procedimentos;
+
+public class Ex86 {
+    public static void Gerador() {
+        System.out.println("+-------=======------+");
+        System.out.println("     Olá, Mundo!      ");
+        System.out.println("+-------=======------+");
+    }
+
+
+    public static void main(String[] args) {
+
+        Gerador();
+
+    }
+}
