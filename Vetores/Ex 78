@@ -1,0 +1,31 @@
+package Vetores;
+
+import java.util.Scanner;
+
+public class Ex78 {
+    public static void main(String[] args) {
+        /*78) Escreva um programa que leia 15 números e guarde-os em um vetor. No final,
+            mostre o vetor inteiro na tela e em seguida mostre em que posições foram
+            digitados valores que são múltiplos de 10.*/
+
+        Scanner teclado = new Scanner(System.in);
+        int [] vetor = new int[15];
+
+
+        for (int i = 0; i < vetor.length ; i++) {
+            System.out.println("Digite um número: ");
+            int numero = teclado.nextInt();
+            vetor[i]=numero;
+        }
+        for (int i = 0; i <vetor.length; i++) {
+            System.out.println(vetor[i]);
+
+        }
+        for (int i = 0; i < vetor.length; i++) {
+            if(vetor[i]%10==0){
+                System.out.println("A posição "+i+" é multiplo de 10.");
+            }
+        }
+
+    }
+}
