@@ -1,0 +1,39 @@
+package Vetores;
+
+import java.util.Scanner;
+
+public class Ex80 {
+    public static void main(String[] args) {
+       /*80) Faça um algoritmo que preencha um vetor de 30 posições com números aleatórios
+       entre 1 e 15 sorteados pelo computador. Depois disso, peça para o usuário digitar um
+        número (chave) e seu programa deve mostrar em que posições essa chave foi
+        encontrada. Mostre também quantas vezes a chave foi sorteada.*/
+
+        Scanner teclado = new Scanner(System.in);
+
+        int [] vetor = new int[30];
+        int somaVezes = 0;
+
+        for (int i = 0; i < vetor.length; i++) {
+            int numeroAleatorio = 1 + (int)(Math.random()* ((15 - 1)+1)); //gerar a cada loop
+            vetor[i] = numeroAleatorio; //vetor de 30 posições recebe números aleatórios
+        }
+
+//        for (int i = 0; i < vetor.length; i++) {//mostrar as chaves para teste
+//            System.out.print(vetor[i] + " ");
+//        }
+
+        System.out.println();
+        System.out.println("Digite a chave: [1-15]");
+        int chave = teclado.nextInt();
+
+        System.out.print("A chave está na posição: ");
+        for (int i = 0; i < vetor.length; i++) {
+            if(chave == vetor[i]){
+                System.out.print(i+", ");
+                somaVezes++; //conta quantas vezes apareceu
+            }
+        }
+        System.out.println("A chave apareceu "+somaVezes+" vezes.");
+    }
+}
