@@ -1,0 +1,25 @@
+package Procedimentos;
+
+import java.util.Scanner;
+
+public class Ex92 {
+    /*92) Crie uma lógica que leia um número inteiro e passe para um procedimento
+        ParOuImpar() que vai verificar e mostrar na tela se o valor passado como
+        parâmetro é PAR ou ÍMPAR*/
+
+    public static void ParOuImpar(int a){
+
+        if (a %2 == 0){
+            System.out.println("é par");
+        }else{
+            System.out.println("é impar");
+        }
+
+    }
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Qual número gostaria de saber se é par ou impar?");
+        int n = teclado.nextInt();
+        ParOuImpar(n);
+    }
+}
