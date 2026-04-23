@@ -1,0 +1,49 @@
+System.out.println("----------------------------FOLHA DE PAGAMENTO-----------------------------");
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor do seu salário bruto: R$ ");
+        double salarioBruto = scanner.nextDouble();
+
+        System.out.print("Digite o número de horas trabalhadas no mês: ");
+        int horasTrabalhadas = scanner.nextInt();
+
+        // Validação
+        if (salarioBruto < 0 || horasTrabalhadas < 0) {
+            System.out.println("Digite um valor válido!");
+            return;
+        }
+
+        double adicionais = 0;
+
+        // Horas extras
+        if (horasTrabalhadas > 160) {
+            int horasExtras = horasTrabalhadas - 160;
+            double valorHora = salarioBruto / 160;
+            adicionais = valorHora * 0.5 * horasExtras;
+            System.out.println("Você receberá R$ " + adicionais + " de horas extras.");
+        } else {
+            System.out.println("Você não tem horas extras.");
+        }
+
+        // Descontos
+        double salarioLiquido;
+
+        if (salarioBruto <= 800) {
+            System.out.println("Você não possui descontos.");
+            salarioLiquido = salarioBruto;
+
+        } else if (salarioBruto <= 1600) {
+            double descRenda = salarioBruto * 0.08;
+            double descEnc = salarioBruto * 0.05;
+            salarioLiquido = salarioBruto - (descRenda + descEnc);
+
+        } else {
+            double descRenda = salarioBruto * 0.15;
+            double descEnc = salarioBruto * 0.07;
+            salarioLiquido = salarioBruto - (descRenda + descEnc);
+        }
+
+        System.out.println("Seu salário líquido é: R$ " + (salarioLiquido + adicionais));
+
+        scanner.close()
